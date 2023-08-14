@@ -39,9 +39,9 @@ Projet n°3 du parcours "Développeur d'application JavaScript React d'Open Clas
 - Texte: Roboto
 
 **Couleurs :**
-- Primaire: #9356DC
-- Secondaire: #FF79DA
-- Tertiaire: #99E2D0
+- Primaire: `#9356DC`
+- Secondaire: `#FF79DA`
+- Tertiaire: `#99E2D0`
 
 **Contraintes  techniques:**
 - Approche mobile-first
