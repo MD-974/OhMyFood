@@ -1,1 +1,13 @@
-h1 {color: red;}
+/*--------------------------------GENERAL----------------------------------*/
+/*!--ALL--*/
+
+*{
+    font-family: 'Roboto', sans-serif;  /***font Roboto par defaut***/
+    margin: 0;                          /****enleve la marge exterieur*(rezet)****/
+    padding: 0;                         /****enleve la marge interieur*(rezet)****/
+}
+
+a{
+    text-decoration: none;             /****enleve le underline****/
+    color: black;                    /****couleur par defaut****/
+}
