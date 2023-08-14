@@ -4,6 +4,7 @@ Projet n°3 du parcours "Développeur d'application JavaScript React d'Open Clas
 ## Objectifs du projet :
 
 L'objectif est d'intégrer puis de dynamiser une page web avec des animations CSS.
+Lien pour visualiser le site : https://md-974.github.io/OhMyFood/
 
 ### Pages à intégrer selon les maquettes
 
