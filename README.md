@@ -40,8 +40,8 @@ Projet n°3 du parcours "Développeur d'application JavaScript React d'Open Clas
 
 **Polices :**
 
-- Logo & titres: _Shrikhand_
-- Texte: _Roboto_
+- Logo & titres: **Shrikhand**
+- Texte: **Roboto**
 
 **Couleurs :**
 
