@@ -45,9 +45,9 @@ Projet n°3 du parcours "Développeur d'application JavaScript React d'Open Clas
 
 **Couleurs :**
 
-- Primaire: `#9356DC`
-- Secondaire: `#FF79DA`
-- Tertiaire: `#99E2D0`
+- Primaire: #9356DC :purple_circle:
+- Secondaire: #FF79DA :rose_circle:
+- Tertiaire: #99E2D0 :green_circle:
 
 **Contraintes  techniques:**
 
