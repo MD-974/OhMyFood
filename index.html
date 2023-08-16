@@ -22,18 +22,21 @@
 
  </head>
  <body>
-      <header>
-        <nav>
-            <img src="ASSETS/PICTURES/logo/ohmyfood@2x.svg" alt="logo Oh My Food">
-            <form action="#" method="get">
-                <label><i class="fa-solid fa-location-dot"></i></label>
-                <input disabled type="search" id="localisation" name="lacalisation" placeholder="Paris, Belleville">
-            </form>
-        </nav>
+      <header class="header">
+            <nav class="navbar">
 
-      </header>
+                <img class="navbar__logo" 
+                src="ASSETS/PICTURES/logo/ohmyfood@2x.svg" alt="logo Oh My Food">
 
-      <main>
+                <form class="navbar__research" action="#" method="get">
+                    <label><i class="navbar__research--icon fa-solid fa-location-dot"></i></label>
+                    <input class="navbar__research--input" disabled type="search" id="localisation" name="lacalisation" placeholder="Paris, Belleville">
+                </form>
+
+            </nav>
+        </header>
+
+        <main>
 
          <!-- premiere partie -->
 
@@ -67,7 +70,7 @@
          <h3>Le délice des sens</h3>
          <p>Folie-Méricourt</p>
 
-      </main>
+        </main>
       
       <footer>
 
