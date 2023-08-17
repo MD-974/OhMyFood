@@ -162,3 +162,7 @@ footer {
     font-family: "Shrikhand", sans-serif;
     font-weight: 200;
 }
+.footer__link {
+    color: white;
+    line-height: 1.7;
+  }
