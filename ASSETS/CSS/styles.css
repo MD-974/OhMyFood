@@ -29,6 +29,7 @@ nav {
     flex-direction: column;
 }
 .nav__titre {
+    width: 100%;
     font-family: "Shrikhand", sans-serif;
     text-align: center;
     font-size: 36px;
