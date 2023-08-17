@@ -154,7 +154,10 @@ input {
     /* restaurant4 */
 
 /*--------------------------------FOOTER-----------------------------------*/
-
+footer {
+    background-color: #353535;
+    color: white;
+}
 .footer__titre {
     font-family: "Shrikhand", sans-serif;
     font-weight: 200;
