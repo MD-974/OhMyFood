@@ -121,8 +121,6 @@ input {
     margin: 0 1rem 0 -1.05rem;
 }
 .home__fonctionnement li {
-    /* display: flex;
-    align-items: center;} */
     width: 95%;
     height: 70px;
     border-radius: 20px;
