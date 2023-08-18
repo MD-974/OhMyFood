@@ -150,6 +150,7 @@ input {
     max-width: 90rem;
     padding: 2.25rem 0 1.25rem;
 }
+
     /* restaurant1 */
     /* restaurant2 */
     /* restaurant3 */
@@ -164,8 +165,9 @@ footer {
     font-family: "Shrikhand", sans-serif;
     font-weight: 200;
     padding-bottom: 1rem;
+    font-size: 1.125rem;
 }
 .footer__link {
     color: white;
     line-height: 1.7;
-  }
+}
