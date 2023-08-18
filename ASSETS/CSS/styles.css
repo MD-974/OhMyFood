@@ -53,6 +53,7 @@ nav .nav__form form {
 }
 input {
     font-family: "Roboto", sans-serif;
+    background: transparent;
     color: black;
     font-size: 1rem;
     font-weight: 500;
@@ -171,11 +172,6 @@ input {
     flex-direction: column;
     gap: 0.313rem;
 }
-
-/* restaurant1 */
-/* restaurant2 */
-/* restaurant3 */
-/* restaurant4 */
 
 /*--------------------------------FOOTER-----------------------------------*/
 footer {
