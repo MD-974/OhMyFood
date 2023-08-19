@@ -70,10 +70,13 @@ input {
     justify-content: space-around;
     align-items: center;
     margin: 2.5rem auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all  550ms;  
 }
 .button:hover {
     transform: scale(1.02);
+    opacity: 0.80;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
 }
 /*---------------------------------MAIN------------------------------------*/
 
@@ -106,10 +109,7 @@ input {
     font-size: 17px;
     font-weight: 300;
 }
-
 /* FONCTIONNEMENT */
-
-
 
 .home__fonctionnement--liste span {
     display: flex;
@@ -133,6 +133,9 @@ input {
     margin: 1.5rem 0 1.5rem 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+/* .home__fonctionnement li:hover {
+    transform: scale(1.05);
+} */
 .home__fonctionnement i {
     padding: 0 2rem 0 0.5rem;
 }
