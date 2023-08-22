@@ -12,14 +12,26 @@ body {
 section, footer {
     padding: 1.5rem 1rem;
 }
+input {
+    border: inherit;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+}
+img {
+  display: block;
+  width: 100%;
+}
 a {
     text-decoration: none;            
     color: black;                    
 }
 li {
     list-style: none; 
+} 
+h2 {
+    font-size: 24px;
 }
-
 /*--------------------------------HEADER-----------------------------------*/
 
 nav {
@@ -29,7 +41,6 @@ nav {
     flex-direction: column;
 }
 .nav__titre {
-    /* width: 100%; */
     font-family: "Shrikhand", sans-serif;
     text-align: center;
     font-size: 36px;
@@ -40,7 +51,7 @@ nav .nav__form {
     background: #EAEAEA;
     display: flex;
     justify-content: space-around;
-    padding: 15px 0;
+    padding: 0.938rem 0;
     box-shadow: inset 0px 2px 5px 0px #b9b3b3;
 }
 nav .nav__form form {
@@ -48,37 +59,33 @@ nav .nav__form form {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 5rem;
-    gap: 17px;
+    padding-left: 4rem;
+    gap: 1rem;
 }
 input {
-    font-family: "Roboto", sans-serif;
-    color: black;
     font-size: 1rem;
     font-weight: 500;
-    background: transparent;
-    border: hidden; /* pour cacher */
-    border: 0;      /*  la bordure */
+}
+input::placeholder {
+    color: black;   
 }
 .button {
-    max-width: 218px;
-    height: 50px;
+    max-width: 13.625rem;
+    height: 3.125rem;
     padding: 0 0.5rem;
     background: linear-gradient(#FF79DA, #9356DC);
     color: white;
-    border-radius: 50px;
+    border-radius: 3.125rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 2.5rem auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all  550ms;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);    
 }
 .button:hover {
-    transform: scale(1.02);
-    opacity: 0.80;
+    opacity: 0.70;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
-}
+  }
 /*---------------------------------MAIN------------------------------------*/
 
 /* INTRODUCTION */
@@ -100,9 +107,6 @@ input {
 .home h2, .home h3 {
     font-weight: 700;
 } 
-.home h2 {
-    font-size: 24px;
-}
 .home h3 {
     font-size: 18px;
 }
@@ -110,30 +114,23 @@ input {
     font-size: 17px;
     font-weight: 300;
 }
+
 /* FONCTIONNEMENT */
 
 /* fonction d'ajout compteur */
- .home__fonctionnement--liste /*enlever le span */{  
+.home__fonctionnement--liste {
     counter-reset: numbers;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 3.125rem;
-    color: white;
-    background: #9356DC;
-    margin: 0 1rem 0 -1.05rem; */
-
 }
 .home__fonctionnement li {
+    max-width: 1440px;
     width: 95%;
     height: 70px;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background: #F6F6F6;
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
+    /* margin: 0 auto; */
     margin: 1.5rem 0 1.5rem 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -163,31 +160,34 @@ input {
 }
 
 /* RESTAURANTS */
-
 .home__restaurants {
+    background: #F6F6F6;
     display: flex;
     flex-direction: column;
     gap: 1.125rem; 
-    /* background: #F6F6F6; */
-    background-color: #FF79DA;  
+    padding-bottom: 4rem;
+}
+.home__restaurants-groupes {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 1rem; */
 }
 .home__restaurants--title {
     max-width: 90rem;
     padding: 2.25rem 0 0.25rem;
 }
-.home__restaurants--article {
-    background-color: red;
-    border-radius: 0.93rem;
+.home__restaurants article {
+    width: 100%;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    position: relative;
+    background: white;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-.restaurant__container {
-    max-width: 87rem;
-    height: 17rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.93rem;
-    /* background-color: blueviolet; */
-}
-.home__restaurants--new {
+.new {
     position: relative;
 }
 .new::before {
@@ -203,12 +203,14 @@ input {
     color: #278870;
     border-radius: 0.125rem;
 }
-.home__restaurants--img {
-    border-radius: 0.938rem 0.938rem 0 0;
+.home__restaurants article img {
+    height: 10.44rem;
     object-fit: cover;
-    width: 100%;
-    height: 14.313rem;
 }
+.img-high {
+    object-fit: cover;
+    object-position: center -9.3rem ;
+} 
 .home__restaurants--info {
     border-radius: 0 0 0.93rem 0.93rem;
     background-color: white;
@@ -216,6 +218,37 @@ input {
     display: flex;
     flex-direction: column;
     gap: 0.313rem;
+}
+
+/* partie--heart */
+article a { 
+    z-index: 1;
+}
+.home__restaurants--heart {
+    width: 3.125rem;
+    position: absolute;
+    bottom: 3.2rem;
+    right: 0.4rem;
+    z-index: 10;
+
+}
+.home__restaurants--heart i {
+    font-size: 1.5rem;
+    position: absolute;  
+}
+.full {
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    opacity: 0;
+}
+.home__restaurants--heart:hover > .full {
+    opacity: 1;
+}
+.empty:hover {
+    opacity: 0;
 }
 
 /*--------------------------------FOOTER-----------------------------------*/
@@ -233,3 +266,4 @@ footer {
     color: white;
     line-height: 1.7;
 }
+
