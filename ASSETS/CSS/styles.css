@@ -370,6 +370,11 @@ nav .fleche-retour .fa-arrow-left {
     flex-direction: row;
     justify-content: space-between;
 }
+.plat__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .plat__prix {
     padding-right: 0.5rem;
 }
