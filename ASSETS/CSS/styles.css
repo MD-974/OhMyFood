@@ -130,9 +130,8 @@ input::placeholder {
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
-    /* margin: 0 auto; */
     margin: 1.5rem 0 1.5rem 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 /*mise en place du compteur sur li   ::before pour avoir les chiffres qui se suivent*/
 .home__fonctionnement--liste li::before { 
@@ -172,7 +171,6 @@ input::placeholder {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    /* padding: 0 1rem; */
 }
 .home__restaurants--title {
     max-width: 90rem;
@@ -185,7 +183,7 @@ input::placeholder {
     position: relative;
     background: white;
     margin: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .new {
     position: relative;
@@ -209,7 +207,7 @@ input::placeholder {
 }
 .img-high {
     object-fit: cover;
-    object-position: center -9.3rem ;
+    object-position: center -9.9rem ;
 } 
 .home__restaurants--info {
     border-radius: 0 0 0.93rem 0.93rem;
@@ -219,18 +217,17 @@ input::placeholder {
     flex-direction: column;
     gap: 0.313rem;
 }
-
-/* partie--heart */
 article a { 
     z-index: 1;
 }
+
+    /*! partie--heart */
 .home__restaurants--heart {
     width: 3.125rem;
     position: absolute;
-    bottom: 3.2rem;
+    bottom: 3.1rem;
     right: 0.4rem;
     z-index: 10;
-
 }
 .home__restaurants--heart i {
     font-size: 1.5rem;
@@ -243,13 +240,141 @@ article a {
     background-clip: text;
     -webkit-text-fill-color:transparent;
     opacity: 0;
+    transition: 1s; 
+}
+.empty:hover {
+    opacity: 0;
+    transition: 3s; 
 }
 .home__restaurants--heart:hover > .full {
     opacity: 1;
 }
-.empty:hover {
-    opacity: 0;
+/*! fin partie--heart */
+
+
+
+
+
+
+
+
+
+/* ----PARTIE-PAGE-RESTAURANT---- */
+
+/* header */
+nav .fleche-retour {
+    position: absolute;
+    top: 1.8rem;
+    left: 1rem;
 }
+nav .fleche-retour .fa-arrow-left {
+    font-size: 1.5rem;
+}
+/* main */
+.restaurant__main {
+    background: #F6F6F6;
+    padding-bottom: 1rem;
+}
+.restaurant--img {
+    width: 100%;
+    height:17.188rem;
+    object-fit: cover;
+    object-position: center;
+}
+.restaurant__menu {
+    background: #F6F6F6;
+    position: relative;
+    border-radius: 2rem 2rem 0 0;
+    max-width: 1440px;
+    margin: -2rem 0 0 0;
+    padding-bottom: 0.5rem;
+    
+}
+.restaurant__menu--container {
+    position: relative;
+}
+.container__titre {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    max-width: 76%;
+    
+}
+.restaurant__menu--container .home__restaurants--heart {
+    bottom: 2.1rem;
+    right: -0.5rem;
+}
+.restaurant__menu--bouton {
+    max-width: 13.625rem;
+    height: 3.125rem;
+    padding: 0 4.5rem;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    border-radius: 3.125rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 1s; 
+}
+.restaurant__menu--bouton:hover {
+    opacity: 0.70;
+    box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
+}
+/* menu */
+.restaurant__menu--entrees {
+    width: 100%;
+    max-width: 39.625rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #F6F6F6;
+}
+.restaurant__menu--plats {
+    width: 100%;
+    max-width: 39.625rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #F6F6F6;
+}
+.restaurant__menu--desserts {
+    width: 100%;
+    max-width: 39.625rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #F6F6F6;
+}
+.restaurant__menu--titre {
+    width: 2.5rem;
+    font-size: 16px;
+    font-weight: 300;
+     text-transform: uppercase;/* mettre en maj */
+    border-bottom: 3px solid #99E2D0;
+    height: 24px;
+    margin: 2.5rem 0 0;
+  
+}
+.titre-top {
+    margin: 1.5rem 0 0;
+}
+.plat {
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 12px 0;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+.plat__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.plat__prix {
+    padding-right: 0.5rem;
+}
+
+
 
 /*--------------------------------FOOTER-----------------------------------*/
 footer {
@@ -267,3 +392,4 @@ footer {
     line-height: 1.7;
 }
 
+/* ----------------------------MEDIA-QUERIES--------------------------------- */
