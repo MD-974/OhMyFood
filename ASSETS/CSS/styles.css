@@ -86,6 +86,7 @@ input::placeholder {
     opacity: 0.70;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
   }
+
 /*---------------------------------MAIN------------------------------------*/
 
 /* INTRODUCTION */
@@ -159,22 +160,24 @@ input::placeholder {
 }
 
 /* RESTAURANTS */
+
 .home__restaurants {
     background: #F6F6F6;
     display: flex;
     flex-direction: column;
-    gap: 1.125rem; 
-    padding-bottom: 4rem;
+    /* gap: 1.125rem;  */
+    padding-bottom: 2.5rem;
 }
 .home__restaurants-groupes {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 1080px;
+    /* margin: 0 auto; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    display: grid;
 }
 .home__restaurants--title {
     max-width: 90rem;
-    padding: 2.25rem 0 0.25rem;
+    padding: 2.25rem 0 1rem;
 }
 .home__restaurants article {
     width: 100%;
@@ -182,7 +185,7 @@ input::placeholder {
     overflow: hidden;
     position: relative;
     background: white;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .new {
@@ -253,15 +256,9 @@ article a {
 
 
 
+/*? ----PARTIE-PAGE-RESTAURANT---- */
 
-
-
-
-
-
-/* ----PARTIE-PAGE-RESTAURANT---- */
-
-/* header */
+/*? header */
 nav .fleche-retour {
     position: absolute;
     top: 1.8rem;
@@ -270,7 +267,7 @@ nav .fleche-retour {
 nav .fleche-retour .fa-arrow-left {
     font-size: 1.5rem;
 }
-/* main */
+/*? main */
 .restaurant__main {
     background: #F6F6F6;
     padding-bottom: 1rem;
@@ -322,7 +319,7 @@ nav .fleche-retour .fa-arrow-left {
     opacity: 0.70;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
 }
-/* menu */
+/*? menu */
 .restaurant__menu--entrees {
     width: 100%;
     max-width: 39.625rem;
@@ -351,8 +348,7 @@ nav .fleche-retour .fa-arrow-left {
      text-transform: uppercase;/* mettre en maj */
     border-bottom: 3px solid #99E2D0;
     height: 24px;
-    margin: 2.5rem 0 0;
-  
+    margin: 2.5rem 0 0; 
 }
 .titre-top {
     margin: 1.5rem 0 0;
@@ -362,8 +358,7 @@ nav .fleche-retour .fa-arrow-left {
     border-radius: 15px;
     margin: 12px 0;
     padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
 }
 .plat__container {
     display: flex;
@@ -378,8 +373,7 @@ nav .fleche-retour .fa-arrow-left {
 .plat__prix {
     padding-right: 0.5rem;
 }
-
-
+/*? ----FIN-PARTIE-PAGE-RESTAURANT---- */
 
 /*--------------------------------FOOTER-----------------------------------*/
 footer {
@@ -398,15 +392,14 @@ footer {
 }
 
 
-
-
-
 /* ----------------------------MEDIA-QUERIES--------------------------------- */
+
 @media screen and (min-width: 768px) {
+
+    /* index.html */
     .home__introduction h1 {
         font-size: 2.5rem;   
     } 
-
     .home__fonctionnement {   
          max-width: 1080px;
         margin: 0 auto;
@@ -414,17 +407,23 @@ footer {
     .home__fonctionnement--liste {    
         display: flex;
         justify-content: space-between;
-    
     }
     .home__fonctionnement li {
         margin: 1.5rem 0 1.5rem 0.5rem;
         width: 30%;
     }
-   
+
+    /* restaurant.html */
+    .home__restaurants-groupes {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 50px;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
 
+    /* index.html */
     footer, .footer__titre, .footer__list {
         display: flex;
     }
@@ -451,5 +450,18 @@ footer {
     .link4{
         padding-right: 5rem;
     }
+
+    /* restaurant.html */
+    .home__restaurants-groupes {
+        /* grid-template-columns: 1fr 1fr; */
+        gap: 50px 100px;
+        margin: 0 180px;
+    }
+    .home__restaurants--title {
+        margin: 0 180px;
+        padding: 2rem 0;
+    }
+
+
 }
     
