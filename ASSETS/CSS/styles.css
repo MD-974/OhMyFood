@@ -208,10 +208,9 @@ input::placeholder {
     height: 10.44rem;
     object-fit: cover;
 }
-.img-high {
-    object-fit: cover;
+/* .img-high {
     object-position: center -9.9rem ;
-} 
+}  */
 .home__restaurants--info {
     border-radius: 0 0 0.93rem 0.93rem;
     background-color: white;
@@ -265,7 +264,7 @@ nav .fleche-retour {
     left: 1rem;
 }
 nav .fleche-retour .fa-arrow-left {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 /*? main */
 .restaurant__main {
@@ -394,6 +393,7 @@ footer {
 
 /* ----------------------------MEDIA-QUERIES--------------------------------- */
 
+
 @media screen and (min-width: 768px) {
 
     /* index.html */
@@ -412,13 +412,24 @@ footer {
         margin: 1.5rem 0 1.5rem 0.5rem;
         width: 30%;
     }
-
-    /* restaurant.html */
     .home__restaurants-groupes {
         grid-template-columns: 1fr 1fr;
         gap: 25px 50px;
     }
+    /* .img-high {
+        object-position: center -9.9rem ;
+    }  */
 
+    /* restaurant.html */
+    .container__titre {
+       padding-left: 12rem;
+    }
+    .restaurant__menu--container .home__restaurants--heart {
+        right: 12.5rem;
+    }
+    .centrage {
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -450,8 +461,6 @@ footer {
     .link4{
         padding-right: 5rem;
     }
-
-    /* restaurant.html */
     .home__restaurants-groupes {
         /* grid-template-columns: 1fr 1fr; */
         gap: 50px 100px;
@@ -460,6 +469,25 @@ footer {
     .home__restaurants--title {
         margin: 0 180px;
         padding: 2rem 0;
+    }
+    
+
+    /* restaurant.html */
+
+    .restaurant__menu--container {
+        padding-top: 0.6rem;
+    }
+    /* .img-high {
+        object-position: center -9.9rem ;
+    }  */
+    .container__titre {
+        padding-left: 21rem;
+    }
+     .restaurant__menu--container .home__restaurants--heart {
+        right: 19.5rem;
+    }
+    .restaurant__menu--bouton {
+        margin: 2.5rem auto 1.5rem;
     }
 
 
