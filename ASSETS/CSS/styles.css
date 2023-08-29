@@ -1,5 +1,4 @@
 /*--------------------------------GENERAL----------------------------------*/
-
 * {  
     margin: 0;                          
     padding: 0;                     
@@ -12,7 +11,7 @@ body {
 section, footer {
     padding: 1.5rem 1rem;
 }
-input {
+input, fieldset {
     border: inherit;
     background-color: inherit;
     color: inherit;
@@ -32,8 +31,10 @@ li {
 h2 {
     font-size: 24px;
 }
-/*--------------------------------HEADER-----------------------------------*/
-
+h3 {
+    font-size: 18px;
+}
+/* ------------------------------- HEADER -------------------------------- */
 nav {
     width: 100%;
     max-height: 23.5rem;
@@ -80,17 +81,17 @@ input::placeholder {
     justify-content: space-around;
     align-items: center;
     margin: 2.5rem auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* transition:opacity 0.80s; */
+    transition-property: all;
+    transition-duration: 1000ms;
 }
-.button:hover {
-    opacity: 0.70;
+.button:hover
+{   opacity: 0.60;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
-  }
-
+}
 /*---------------------------------MAIN------------------------------------*/
-
 /* INTRODUCTION */
-
 .home__introduction {
     background: #F6F6F6;
     text-align: center;
@@ -108,18 +109,15 @@ input::placeholder {
 .home h2, .home h3 {
     font-weight: 700;
 } 
-.home h3 {
+/* .home h3 {
     font-size: 18px;
-}
+} */
 .home p {
     font-size: 17px;
     font-weight: 300;
 }
-
 /* FONCTIONNEMENT */
-
-/* fonction d'ajout compteur */
-.home__fonctionnement--liste {
+.home__fonctionnement--liste { /* fonction d'ajout compteur */
     counter-reset: numbers;
 }
 .home__fonctionnement li {
@@ -134,8 +132,7 @@ input::placeholder {
     margin: 1.5rem 0 1.5rem 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/*mise en place du compteur sur li   ::before pour avoir les chiffres qui se suivent*/
-.home__fonctionnement--liste li::before { 
+.home__fonctionnement--liste li::before { /*mise en place du compteur sur li   ::before pour avoir les chiffres qui se suivent*/
     content:counter(numbers);
     counter-increment: numbers;
     color: white;
@@ -158,9 +155,7 @@ input::placeholder {
 .fa-store {
     color: #9356DC;
 }
-
 /* RESTAURANTS */
-
 .home__restaurants {
     background: #F6F6F6;
     display: flex;
@@ -208,9 +203,6 @@ input::placeholder {
     height: 10.44rem;
     object-fit: cover;
 }
-/* .img-high {
-    object-position: center -9.9rem ;
-}  */
 .home__restaurants--info {
     border-radius: 0 0 0.93rem 0.93rem;
     background-color: white;
@@ -222,7 +214,6 @@ input::placeholder {
 article a { 
     z-index: 1;
 }
-
     /*! partie--heart */
 .home__restaurants--heart {
     width: 3.125rem;
@@ -233,7 +224,8 @@ article a {
 }
 .home__restaurants--heart i {
     font-size: 1.5rem;
-    position: absolute;  
+    position: absolute;
+    cursor: pointer;  
 }
 .full {
     background: linear-gradient(#FF79DA, #9356DC);
@@ -242,21 +234,22 @@ article a {
     background-clip: text;
     -webkit-text-fill-color:transparent;
     opacity: 0;
-    /* transition: 1s;  */
+    transition: opacity 0.6s;
+    transition-duration: 2s;
+}
+.empty {
+    transition-duration: 5s;
+    opacity: 1;
 }
 .empty:hover {
+    transition-duration: 1.2s;
     opacity: 0;
-    /* transition: 3s;  */
 }
 .home__restaurants--heart:hover > .full {
     opacity: 1;
-}
+} 
 /*! fin partie--heart */
-
-
-
 /*? ----PARTIE-PAGE-RESTAURANT---- */
-
 /*? header */
 nav .fleche-retour {
     position: absolute;
@@ -267,27 +260,33 @@ nav .fleche-retour .fa-arrow-left {
     font-size: 1.3rem;
 }
 /*? main */
-.restaurant__main {
+/* .restaurant__main {
     background: #F6F6F6;
     padding-bottom: 1rem;
-}
+} */
 .restaurant--img {
     width: 100%;
-    height:17.188rem;
     object-fit: cover;
-    object-position: center;
+    height: 400px;
+    width: 100%;
 }
 .restaurant__menu {
     background: #F6F6F6;
     position: relative;
     border-radius: 2rem 2rem 0 0;
-    max-width: 1440px;
-    margin: -2rem 0 0 0;
-    padding-bottom: 0.5rem;
-    
+    max-width: 1080px;
+    margin: -2rem auto 0;
+}
+.restaurant__menu form fieldset {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 10px;
+    gap: 12px;
 }
 .restaurant__menu--container {
     position: relative;
+    margin: 0 auto;
+    max-width: 1080px;
 }
 .container__titre {
     font-family: "Shrikhand", sans-serif;
@@ -298,7 +297,7 @@ nav .fleche-retour .fa-arrow-left {
 }
 .restaurant__menu--container .home__restaurants--heart {
     bottom: 2.1rem;
-    right: -0.5rem;
+    right: 1rem;
 }
 .restaurant__menu--bouton {
     max-width: 13.625rem;
@@ -320,23 +319,32 @@ nav .fleche-retour .fa-arrow-left {
 }
 /*? menu */
 .restaurant__menu--entrees {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* width: 100%; */
     max-width: 39.625rem;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     margin-bottom: 1.5rem;
     background-color: #F6F6F6;
 }
 .restaurant__menu--plats {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* width: 100%; */
     max-width: 39.625rem;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     margin-bottom: 1.5rem;
     background-color: #F6F6F6;
 }
 .restaurant__menu--desserts {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* width: 100%; */
     max-width: 39.625rem;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     margin-bottom: 1.5rem;
     background-color: #F6F6F6;
 }
@@ -347,33 +355,117 @@ nav .fleche-retour .fa-arrow-left {
      text-transform: uppercase;/* mettre en maj */
     border-bottom: 3px solid #99E2D0;
     height: 24px;
-    margin: 2.5rem 0 0; 
+    /* margin: 2.5rem 0 0;  */
+    margin-bottom: 0.75rem;
 }
-.titre-top {
-    margin: 1.5rem 0 0;
-}
-.plat {
+/* .titre-top {
+    margin-bottom: 0.75rem;
+} */
+/* .form__plat {
     background-color: #fff;
     border-radius: 15px;
     margin: 12px 0;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
+} */
+.plat { /*~~~~~~ attention first version oki ~~~~*/
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    /* margin: 12px 0; */
+    /* padding: 1rem; */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
+} 
+/* rajout */
+/* .plat {
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+} */
+/* rajout */
+.plat__menu {
+    padding: 0.625rem;
+    flex: 1;
+    width: 100%;
+    /* text-overflow: ellipsis; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+}
+/* rajout */
+/* .plat__menu {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+} */
+.plat__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 300;
+}
+/* rajout */
+/* .plat__prix {
+    align-self: end;
+    padding: 0.625rem 1rem;
+} */
+/* rajout */
+.plat__tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin-right: -50px;
+    background-color: #99E2D0;
+    border-radius: 0 1rem 1rem 0;
+    transition: all 0.3s ease-in-out;
+
+}
+.plat__tag--wrap {
+    width: 1.3rem;
+    height: 1.3rem;
+    transition: transform 0.25s linear;
+}
+.plat__tag--icon { 
+    font-size: 1.3rem;
+    padding-right: 0;
+    color: white;
+}
+.plat:hover .plat__tag {
+    margin-right: 0rem;
 }
 .plat__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.plat__description {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
 .plat__prix {
     padding-right: 0.5rem;
 }
-/*? ----FIN-PARTIE-PAGE-RESTAURANT---- */
+/* .form__plat--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} */
 
+/* .form__plat--description {
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+} */
+.plat__description {
+    text-overflow: ellipsis;  /*mettre ... le depassement texte*/
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* .plat__prix {
+    padding-right: 0.5rem;
+} */
+
+/*? ----FIN-PARTIE-PAGE-RESTAURANT---- */
 /*--------------------------------FOOTER-----------------------------------*/
 footer {
     background-color: #353535;
@@ -389,13 +481,8 @@ footer {
     color: white;
     line-height: 1.7;
 }
-
-
 /* ----------------------------MEDIA-QUERIES--------------------------------- */
-
-
 @media screen and (min-width: 768px) {
-
     /* index.html */
     .home__introduction h1 {
         font-size: 2.5rem;   
@@ -416,10 +503,6 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 25px 50px;
     }
-    /* .img-high {
-        object-position: center -9.9rem ;
-    }  */
-
     /* restaurant.html */
     .container__titre {
        padding-left: 12rem;
@@ -428,12 +511,10 @@ footer {
         right: 12.5rem;
     }
     .centrage {
-        margin: 0 auto;
+        margin: 2.5rem auto 0;
     }
 }
-
-@media screen and (min-width: 1024px) {
-
+@media screen and (min-width: 1080px) {
     /* index.html */
     footer, .footer__titre, .footer__list {
         display: flex;
@@ -470,26 +551,20 @@ footer {
         margin: 0 180px;
         padding: 2rem 0;
     }
-    
-
     /* restaurant.html */
-
+    .restaurant__menu{
+       margin: -2rem auto 0;
+    }
     .restaurant__menu--container {
         padding-top: 0.6rem;
     }
-    /* .img-high {
-        object-position: center -9.9rem ;
-    }  */
     .container__titre {
-        padding-left: 21rem;
+        padding-left: 22rem;
     }
      .restaurant__menu--container .home__restaurants--heart {
-        right: 19.5rem;
+        right: 22.5rem;
     }
     .restaurant__menu--bouton {
         margin: 2.5rem auto 1.5rem;
     }
-
-
 }
-    
