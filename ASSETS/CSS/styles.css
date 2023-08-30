@@ -417,12 +417,11 @@ nav .fleche-retour .fa-arrow-left {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    margin-right: -50px;
+    width: 70px;
+    margin-right: -70px;
     background-color: #99E2D0;
     border-radius: 0 1rem 1rem 0;
-    transition: all 0.3s ease-in-out;
-
+    transition: all 1s ease-in-out;
 }
 .plat__tag--wrap {
     width: 1.3rem;
@@ -543,7 +542,6 @@ footer {
         padding-right: 5rem;
     }
     .home__restaurants-groupes {
-        /* grid-template-columns: 1fr 1fr; */
         gap: 50px 100px;
         margin: 0 180px;
     }
