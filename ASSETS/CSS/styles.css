@@ -320,6 +320,7 @@ nav .fleche-retour .fa-arrow-left {
 .restaurant__menu--bouton:hover {
     opacity: 0.70;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
+    transition: opacity 1.5s ease-in-out;
 }
 /*? menu */
 .restaurant__menu--entrees {
