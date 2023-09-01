@@ -31,6 +31,80 @@ li {
 h2 {
     font-size: 24px;
 }
+/* ------------------------------- LOADER -------------------------------- */
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F6F6F6; 
+    display: flex; 
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.lettre {
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 10px;
+    animation: flash 1s linear infinite;
+    -webkit-animation: flash 1.25s linear infinite;
+}
+@keyframes flash {
+    0% {
+        color: #FF79DA;
+        text-shadow: 0 0 20px  #9356DC;
+    }
+    90% {
+        color:  #9356DC;
+        text-shadow: none;
+    }
+    100% {
+        color: #FF79DA;
+        text-shadow: 0 0 20px  #9356DC;
+    }
+}
+.disappear {
+    animation: end 3s forwards;
+    animation-delay: 5s;
+} 
+  @keyframes end {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
+.lettre:nth-child(9){
+    animation-delay: 0.9s;
+}
+.lettre:nth-child(10){
+    animation-delay: 1s;
+}
 /* ------------------------------- HEADER -------------------------------- */
 nav {
     width: 100%;
@@ -86,6 +160,7 @@ input::placeholder {
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
 }
 /*---------------------------------MAIN------------------------------------*/
+/* INTRODUCTION */
 .home__introduction {
     background: #F6F6F6;
     text-align: center;
@@ -234,7 +309,6 @@ article a {
 } 
 /*! fin partie--heart */
 /*? ----PARTIE-PAGE-RESTAURANT---- */
-
 /*? header */
 nav .fleche-retour {
     position: absolute;
@@ -273,7 +347,8 @@ nav .fleche-retour .fa-arrow-left {
     font-family: "Shrikhand", sans-serif;
     font-size: 28px;
     font-weight: 400;
-    max-width: 76%;    
+    max-width: 76%;
+    
 }
 .restaurant__menu--container .home__restaurants--heart {
     bottom: 2.1rem;
@@ -298,30 +373,6 @@ nav .fleche-retour .fa-arrow-left {
     transition: opacity 1.5s ease-in-out;
 }
 /*? menu */
-.restaurant__menu--entrees {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 39.625rem;
-    margin-bottom: 1.5rem;
-    background-color: #F6F6F6;
-}
-.restaurant__menu--plats {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 39.625rem;
-    margin-bottom: 1.5rem;
-    background-color: #F6F6F6;
-}
-.restaurant__menu--desserts {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 39.625rem;
-    margin-bottom: 1.5rem;
-    background-color: #F6F6F6;
-}
 .restaurant__menu--titre {
     width: 2.5rem;
     font-size: 16px;
@@ -331,35 +382,18 @@ nav .fleche-retour .fa-arrow-left {
     height: 24px;
     margin-bottom: 0.75rem;
 }
-.plat { 
+.restaurant__menu--entrees, .restaurant__menu--plats, .restaurant__menu--desserts {
     display: flex;
-    background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
-} 
-.plat__menu {
-    padding: 0.938rem;
-    flex: 1;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.plat__menu--nom {
-    font-size: 18px;
-    font-weight: 500;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.plat__description {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    font-weight: 300;
-}
-.plat__tag {
+    background-color: #F6F6F6;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 39.625rem;
+    margin-bottom: 1.5rem;
+}  
+.plat, .plat__tag, .plat__container {
     display: flex;
+}
+.plat__tag { /*display: flex*/
     justify-content: center;
     align-items: center;
     width: 70px;
@@ -368,23 +402,42 @@ nav .fleche-retour .fa-arrow-left {
     border-radius: 0 1rem 1rem 0;
     transition: all 1s ease-in-out;
 }
+.plat:hover .plat__tag {
+    margin-right: 0rem;
+}
+.plat__container { /*display: flex*/
+    flex-direction: row;
+    justify-content: space-between;
+}
+.plat { /*display: flex*/
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
+}
+.plat:hover {
+    transform: scale(1.1);
+}
+.plat__menu, .plat__menu--nom, .plat__description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+} 
+.plat__menu {  /*-- (overflow:hidden)&(text-overflow:ellipsis)&(white-space:nowrap) --*/
+    padding: 0.938rem;
+    flex: 1;
+}
+.plat__menu--nom { /*-- (overflow:hidden)&(text-overflow:ellipsis)&(white-space:nowrap) --*/
+    font-size: 18px;
+    font-weight: 500;
+}
+.plat__description { /*-- (overflow:hidden)&(text-overflow:ellipsis)&(white-space:nowrap) --*/
+    font-weight: 300;
+}
 .plat__tag--icon { 
     font-size: 1.3rem;
     padding-right: 0;
     color: white;
-}
-.plat:hover .plat__tag {
-    margin-right: 0rem;
-}
-.plat__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.plat__description {
-    text-overflow: ellipsis;  /*mettre ... le depassement texte*/
-    overflow: hidden;
-    white-space: nowrap;
 }
 @keyframes arise {
     0% {
@@ -394,41 +447,42 @@ nav .fleche-retour .fa-arrow-left {
       opacity: 1;
     }
 }
-/* partie plat */
-.entree-1, .entree-2, .entree-3, .plat-1, .plat-2, .plat-3, .dessert-1, .dessert-2, .dessert-3 {
+.plat-1, .plat-2, .plat-3, .plat-4, .plat-5, .plat-6, .plat-7, .plat-8, .plat-9, .plat-10 {
     opacity: 0;
     animation-fill-mode: forwards;
     animation-name: arise;
     animation-duration: 1s;
 }
-.entree-1 {
-    animation-delay: 0.35s;  
-}
-.entree-2 {
-    animation-delay: 0.7s;
-}
-.entree-3 {
-    animation-delay: 1.05s;
-}
 .plat-1 {
-    animation-delay: 1.4s;
+    animation-delay: 0.5s;
 }
 .plat-2 {
-    animation-delay: 1.75s;
+    animation-delay: 1s;
 }
 .plat-3 {
-    animation-delay: 2.1s;
+    animation-delay: 1.5s;
 }
-.dessert-1 {
-    animation-delay: 2.45s;
+.plat-4 {
+    animation-delay: 2s;
 }
-.dessert-2 {
-    animation-delay: 2.8s;
+.plat-5 {
+    animation-delay: 2.5s;
 }
-.dessert-3 {
-    animation-delay: 3.15s;
+.plat-6 {
+    animation-delay: 3s;
 }
-
+.plat-7 {
+    animation-delay: 3.5s;
+}
+.plat-8 {
+    animation-delay: 4s;
+}
+.plat-9 {
+    animation-delay: 4.5s;
+}
+.plat-10 {
+    animation-delay: 5s;
+}
 /*? ----FIN-PARTIE-PAGE-RESTAURANT---- */
 /*--------------------------------FOOTER-----------------------------------*/
 footer {
@@ -445,7 +499,6 @@ footer {
 .footer__link {
     color: white;
     line-height: 1.7;
-    
 }
 /* ----------------------------MEDIA-QUERIES--------------------------------- */
 @media screen and (min-width: 768px) {
@@ -454,7 +507,7 @@ footer {
         font-size: 2.5rem;   
     } 
     .home__fonctionnement {   
-         max-width: 1080px;
+        max-width: 1080px;
         margin: 0 auto;
     }
     .home__fonctionnement--liste {    
@@ -498,11 +551,11 @@ footer {
         align-items: center;
         padding-right: 4rem;
     }
-    .footer__link {
-        padding-right: 0.7rem;
+    .footer__icon2 {
+        padding-right: 0.7rem; 
     }
     .link1 {
-        padding:0.7rem; 
+        padding-right: 0.7rem; 
     }
     .link2 {
         padding-right: 3rem;   
