@@ -238,7 +238,7 @@ article a {
 /*? header */
 nav .fleche-retour {
     position: absolute;
-    top: 1.8rem;
+    top: 3rem;
     left: 1rem;
 }
 nav .fleche-retour .fa-arrow-left {
@@ -326,7 +326,7 @@ nav .fleche-retour .fa-arrow-left {
     width: 2.5rem;
     font-size: 16px;
     font-weight: 300;
-     text-transform: uppercase;/* 𝘮𝘦𝘵𝘵𝘳𝘦 𝘦𝘯 𝘮𝘢𝘫 */
+    text-transform: uppercase;/* 𝘮𝘦𝘵𝘵𝘳𝘦 𝘦𝘯 𝘮𝘢𝘫 */
     border-bottom: 3px solid #99E2D0;
     height: 24px;
     margin-bottom: 0.75rem;
@@ -402,31 +402,31 @@ nav .fleche-retour .fa-arrow-left {
     animation-duration: 1s;
 }
 .entree-1 {
-    animation-delay: 0.5s;  
+    animation-delay: 0.35s;  
 }
 .entree-2 {
-    animation-delay: 1s;
+    animation-delay: 0.7s;
 }
 .entree-3 {
-    animation-delay: 1.5s;
+    animation-delay: 1.05s;
 }
 .plat-1 {
-    animation-delay: 2s;
+    animation-delay: 1.4s;
 }
 .plat-2 {
-    animation-delay: 2.5s;
+    animation-delay: 1.75s;
 }
 .plat-3 {
-    animation-delay: 3s;
+    animation-delay: 2.1s;
 }
 .dessert-1 {
-    animation-delay: 3.5s;
+    animation-delay: 2.45s;
 }
 .dessert-2 {
-    animation-delay: 4s;
+    animation-delay: 2.8s;
 }
 .dessert-3 {
-    animation-delay: 4.5s;
+    animation-delay: 3.15s;
 }
 
 /*? ----FIN-PARTIE-PAGE-RESTAURANT---- */
@@ -445,6 +445,7 @@ footer {
 .footer__link {
     color: white;
     line-height: 1.7;
+    
 }
 /* ----------------------------MEDIA-QUERIES--------------------------------- */
 @media screen and (min-width: 768px) {
@@ -497,11 +498,11 @@ footer {
         align-items: center;
         padding-right: 4rem;
     }
-    .footer__icon2 {
-        padding-right: 0.7rem; 
+    .footer__link {
+        padding-right: 0.7rem;
     }
     .link1 {
-        padding-right: 0.7rem; 
+        padding:0.7rem; 
     }
     .link2 {
         padding-right: 3rem;   
