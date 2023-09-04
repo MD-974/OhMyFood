@@ -36,20 +36,41 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #F6F6F6; 
-    display: flex; 
+    background: white;
+    display: flex;
     top: 0;
     left: 0;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    z-index: 100;
+    animation: disappear 10s forwards .5s;
+}
+.principal {
+    opacity: 0;
+    animation: appear 6s forwards 4s;
 }
 .lettre {
     color: #484848;
-    font-size: 80px;
+    font-size: 10vh;
     letter-spacing: 10px;
+    position: sticky;
+    top: 100px;
     animation: flash 1s linear infinite;
-    -webkit-animation: flash 1.25s linear infinite;
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+  100% { 
+    opacity: 1;
+    }
+}
+@keyframes disappear {
+    50% {
+        opacity: 1;
+    }
+  100% { 
+    opacity: 0;
+    }
 }
 @keyframes flash {
     0% {
@@ -65,16 +86,6 @@ h2 {
         text-shadow: 0 0 20px  #9356DC;
     }
 }
-.disappear {
-    animation: end 3s forwards;
-    animation-delay: 5s;
-} 
-  @keyframes end {
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
 .lettre:nth-child(1){
     animation-delay: 0.1s;
 }
@@ -368,9 +379,9 @@ nav .fleche-retour .fa-arrow-left {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .restaurant__menu--bouton:hover {
-    opacity: 0.70;
+    opacity: 0.7;
     box-shadow: 0 6px 4px rgba(0, 0, 0, 0.4);
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 /*? menu */
 .restaurant__menu--titre {
@@ -551,10 +562,7 @@ footer {
         align-items: center;
         padding-right: 4rem;
     }
-    .footer__icon2 {
-        padding-right: 0.7rem; 
-    }
-    .link1 {
+    .footer__icon2, .link1 {
         padding-right: 0.7rem; 
     }
     .link2 {
