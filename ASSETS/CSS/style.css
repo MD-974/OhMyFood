@@ -291,7 +291,8 @@ nav .fleche-retour .fa-arrow-left {
     font-family: "Shrikhand", sans-serif;
     font-size: 28px;
     font-weight: 400;
-    max-width: 76%;    }
+    max-width: 76%;  
+    margin-bottom: 2.5rem;  }
 .restaurant__menu--container .home__restaurants--heart {
     bottom: 2.1rem;
     right: 1rem; }
