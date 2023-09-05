@@ -34,10 +34,12 @@ h2 {
     left: 0;
     justify-content:center;
     align-items: center;
-    animation: disappear 10s forwards .5s; }
+    animation: disappear 5s forwards;
+}
 .principal {
     opacity: 0;
-    animation: appear 6s forwards 4s; }
+    animation: appear 6.5s forwards 4s;
+}
 .lettre {
     color: #484848;
     font-size: 10vh;
@@ -186,25 +188,23 @@ input::placeholder {
 .fa-store {
     color: #9356DC; }
 /* RESTAURANTS */
-.home__restaurants {
-    background: #F6F6F6;
-    padding-top: 1.875rem;
+.home__restaurants, .home__restaurants article, .new {
     position: relative; }
+.home__restaurants { /*position: relative;*/
+    background: #F6F6F6;
+    padding-top: 1.875rem; }
 .home__restaurants-groupes {
     max-width: 1080px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; }
-.home__restaurants article {
+.home__restaurants article { /*position: relative;*/
     width: 100%;
     border-radius: 1.25rem;
     overflow: hidden;
-    position: relative;
     background: white;
     margin: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
-.new {
-    position: relative; }
 .new::before {
     content:"Nouveau";
     display: grid;
