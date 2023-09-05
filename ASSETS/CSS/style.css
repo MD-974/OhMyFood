@@ -346,8 +346,8 @@ nav .fleche-retour .fa-arrow-left {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    }
-.plat:hover {
-    transform: scale(1.1); }
+/* .plat:hover {
+    transform: scale(1.1); } */
 .plat__menu, .plat__menu--nom, .plat__description {
     text-overflow: ellipsis;
     overflow: hidden;
