@@ -63,4 +63,5 @@ Projet n°3 du parcours "Développeur d'application JavaScript React d'Open Clas
 - Approche mobile-first
 - Maquette desktop : à improviser
 - Validation W3C HTML & CSS
+-    lien validation CSS: http://jigsaw.w3.org/css-validator/validator$link
 - Compatibilité : Dernières versions de Chrome, Firefox & Safari
